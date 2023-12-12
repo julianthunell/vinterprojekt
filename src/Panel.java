@@ -15,7 +15,7 @@ public class Panel extends JPanel {
     }
     public void paintComponent(Graphics g){
         g.fill3DRect(x+velocity,y+velocity,30,30,true);
-        if(y = Window.windowHeight )
+        if(y == Window.windowHeight )
 
         frames++;
         if(System.currentTimeMillis() - lastTime >= 1000){
