@@ -4,6 +4,7 @@ import java.awt.*;
 public class Panel extends JPanel {
 
     long lastTime = 0;
+    int velocity = 1;
     long frames = 0;
 
     int x = 0;
@@ -13,7 +14,8 @@ public class Panel extends JPanel {
         this.setBackground(Color.cyan);
     }
     public void paintComponent(Graphics g){
-        g.fill3DRect(x++,y++,30,30,true);
+        g.fill3DRect(x+velocity,y+velocity,30,30,true);
+        if(y = Window.windowHeight )
 
         frames++;
         if(System.currentTimeMillis() - lastTime >= 1000){
