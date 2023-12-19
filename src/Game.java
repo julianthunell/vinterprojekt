@@ -23,6 +23,7 @@ public class Game implements Runnable{
 
     public void update(){
         panel.updateGame();
+        Input.playerMovement();
     }
 
     @Override
