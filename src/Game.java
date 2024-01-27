@@ -4,12 +4,13 @@ public class Game implements Runnable{
     private Thread gameThread;
     private final int fps = 60;
     private final int ups = 120;
+    Player player = new Player();;
 
 
     public Game(){
 
         //gamestart
-        panel = new Panel();
+        panel = new Panel(player);
         window = new Window(panel);
         panel.requestFocus();
         startGameloop();
@@ -19,11 +20,14 @@ public class Game implements Runnable{
     private void startGameloop(){
         gameThread = new Thread(this);
         gameThread.start();
+
+
     }
 
     public void update(){
         panel.updateGame();
-        Input.playerMovement();
+        panel.playerMovement();
+
     }
 
     @Override

@@ -1,10 +1,9 @@
-import com.sun.source.tree.CaseTree;
-
-import java.awt.event.KeyEvent;
+/*import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 public class Input implements KeyListener {
     static boolean playerDown, playerUp, playerRight, playerLeft;
+
 
     public void keyTyped(KeyEvent e) {
 
@@ -51,11 +50,18 @@ public class Input implements KeyListener {
         }
     }
     public static void playerMovement(){
-        if(playerRight){
-            Player.X+=Player.vel;
+        if(playerRight && player.X < (Panel.windowWidth - player.width)){
+            player.X+= player.vel;
         }
-        if(playerRight){
-            Player.Y-=Player.vel;
+        if(playerLeft && player.X > 0){
+            player.X-= player.vel;
+        }
+
+        if (player.y+ player.height < World.floorLimit){
+            player.y+= player.vel;
         }
     }
 }
+
+
+ */

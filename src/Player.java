@@ -1,12 +1,12 @@
-public class Player{
+public class Player {
     //position
-    static int X = 0;
-    static int Y = 0;
+    int x = 0;
+    int y = 0;
     //hitbox
-    static int height = 50;
-    static int width = 20;
+    int height = 50;
+    int width = 20;
 
-    static int vel = 1;
+    static int vel = 2;
     public Player() {
     }
 }
